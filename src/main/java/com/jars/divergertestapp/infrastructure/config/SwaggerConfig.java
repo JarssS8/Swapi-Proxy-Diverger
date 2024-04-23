@@ -15,7 +15,7 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI defineOpenApi() {
         Server server = new Server();
-        server.setUrl("localhost:8080");
+        server.setUrl("http://localhost:8080");
         server.setDescription("Swapi Proxy Server");
 
         Contact myContact = new Contact();
