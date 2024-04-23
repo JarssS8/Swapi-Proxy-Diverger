@@ -26,45 +26,46 @@ class SwapiHttpClientTest {
     @Test
     void testGetSwapiResourceFromApi() {
         String url = SWAPI_BASE_URL + "people?search=Luke";
-        String expectedResponse = "{\n" +
-                "    \"count\": 1,\n" +
-                "    \"next\": null,\n" +
-                "    \"previous\": null,\n" +
-                "    \"results\": [\n" +
-                "        {\n" +
-                "            \"name\": \"Luke Skywalker\",\n" +
-                "            \"height\": \"172\",\n" +
-                "            \"mass\": \"77\",\n" +
-                "            \"hair_color\": \"blond\",\n" +
-                "            \"skin_color\": \"fair\",\n" +
-                "            \"eye_color\": \"blue\",\n" +
-                "            \"birth_year\": \"19BBY\",\n" +
-                "            \"gender\": \"male\",\n" +
-                "            \"homeworld\": \"https://swapi.py4e.com/api/planets/1/\",\n" +
-                "            \"films\": [\n" +
-                "                \"https://swapi.py4e.com/api/films/1/\",\n" +
-                "                \"https://swapi.py4e.com/api/films/2/\",\n" +
-                "                \"https://swapi.py4e.com/api/films/3/\",\n" +
-                "                \"https://swapi.py4e.com/api/films/6/\",\n" +
-                "                \"https://swapi.py4e.com/api/films/7/\"\n" +
-                "            ],\n" +
-                "            \"species\": [\n" +
-                "                \"https://swapi.py4e.com/api/species/1/\"\n" +
-                "            ],\n" +
-                "            \"vehicles\": [\n" +
-                "                \"https://swapi.py4e.com/api/vehicles/14/\",\n" +
-                "                \"https://swapi.py4e.com/api/vehicles/30/\"\n" +
-                "            ],\n" +
-                "            \"starships\": [\n" +
-                "                \"https://swapi.py4e.com/api/starships/12/\",\n" +
-                "                \"https://swapi.py4e.com/api/starships/22/\"\n" +
-                "            ],\n" +
-                "            \"created\": \"2014-12-09T13:50:51.644000Z\",\n" +
-                "            \"edited\": \"2014-12-20T21:17:56.891000Z\",\n" +
-                "            \"url\": \"https://swapi.py4e.com/api/people/1/\"\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
+        String expectedResponse = """
+                {
+                    "count": 1,
+                    "next": null,
+                    "previous": null,
+                    "results": [
+                        {
+                            "name": "Luke Skywalker",
+                            "height": "172",
+                            "mass": "77",
+                            "hair_color": "blond",
+                            "skin_color": "fair",
+                            "eye_color": "blue",
+                            "birth_year": "19BBY",
+                            "gender": "male",
+                            "homeworld": "https://swapi.py4e.com/api/planets/1/",
+                            "films": [
+                                "https://swapi.py4e.com/api/films/1/",
+                                "https://swapi.py4e.com/api/films/2/",
+                                "https://swapi.py4e.com/api/films/3/",
+                                "https://swapi.py4e.com/api/films/6/",
+                                "https://swapi.py4e.com/api/films/7/"
+                            ],
+                            "species": [
+                                "https://swapi.py4e.com/api/species/1/"
+                            ],
+                            "vehicles": [
+                                "https://swapi.py4e.com/api/vehicles/14/",
+                                "https://swapi.py4e.com/api/vehicles/30/"
+                            ],
+                            "starships": [
+                                "https://swapi.py4e.com/api/starships/12/",
+                                "https://swapi.py4e.com/api/starships/22/"
+                            ],
+                            "created": "2014-12-09T13:50:51.644000Z",
+                            "edited": "2014-12-20T21:17:56.891000Z",
+                            "url": "https://swapi.py4e.com/api/people/1/"
+                        }
+                    ]
+                }""";
 
         when(restTemplate.getForEntity(url, String.class))
                 .thenReturn(ResponseEntity.ok(expectedResponse));

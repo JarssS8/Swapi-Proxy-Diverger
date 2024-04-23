@@ -12,13 +12,13 @@ import org.springframework.validation.annotation.Validated;
 public class ErrorItem {
     @JsonProperty("title")
     @Size(max = 100)
-    private String title = null;
+    private String title;
 
     @JsonProperty("code")
     @Size(max = 10)
-    private String code = null;
+    private String code;
 
     @JsonProperty("description")
     @Size(max = 100)
-    private String description = null;
+    private String description;
 }

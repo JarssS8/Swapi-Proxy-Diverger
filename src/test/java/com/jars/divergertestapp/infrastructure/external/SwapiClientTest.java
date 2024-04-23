@@ -1,9 +1,8 @@
 package com.jars.divergertestapp.infrastructure.external;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.jars.divergertestapp.domain.model.*;
 import com.jars.divergertestapp.domain.model.Character;
-import io.swagger.v3.core.util.Json;
+import com.jars.divergertestapp.domain.model.Planet;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -13,12 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest

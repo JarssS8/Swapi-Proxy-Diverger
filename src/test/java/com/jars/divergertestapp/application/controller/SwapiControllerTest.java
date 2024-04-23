@@ -18,9 +18,6 @@ class SwapiControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
-    private SwapiService swapiService;
-
     @Test
     void testGetCharacterCorrect() throws Exception {
         String name = "Luke";
