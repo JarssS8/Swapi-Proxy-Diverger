@@ -1,1 +1,0 @@
-# Swapi-Proxy-Diverger
