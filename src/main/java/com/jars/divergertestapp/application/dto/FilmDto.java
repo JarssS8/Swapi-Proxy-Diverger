@@ -1,19 +1,17 @@
-package com.jars.divergertestapp.domain.model;
+package com.jars.divergertestapp.application.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Film {
-    @JsonProperty("title")
+@AllArgsConstructor
+public class FilmDto {
+    @JsonProperty("name")
     private String name;
     @JsonProperty("release_date")
     private String releaseDate;
